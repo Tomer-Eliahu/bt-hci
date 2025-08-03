@@ -196,7 +196,7 @@ le_events! {
     }
 
     /// LE Periodic Advertising Report event [📖](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host-controller-interface/host-controller-interface-functional-specification.html#UUID-e216c26f-0383-c651-4b8d-1409b91c7e34)
-    struct LePeriodicAdvertisingReport<'a>(15) {
+    struct LePeriodicAdvertisingReportV1<'a>(15) {
         sync_handle: SyncHandle,
         tx_power: i8,
         rssi: i8,
@@ -206,7 +206,7 @@ le_events! {
     }
 
     /// LE Periodic Advertising Report V2 event [📖](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host-controller-interface/host-controller-interface-functional-specification.html#UUID-e216c26f-0383-c651-4b8d-1409b91c7e34)
-    struct LePeriodicAdvertisingReportV2<'a>(37) {
+    struct LePeriodicAdvertisingReport<'a>(37) {
         sync_handle: SyncHandle,
         tx_power: i8,
         rssi: i8,
