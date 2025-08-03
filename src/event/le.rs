@@ -201,12 +201,9 @@ le_events! {
         tx_power: i8,
         rssi: i8,
         cte_kind: CteKind,
-        periodic_event_counter: i16,
-        subevent: i8,
         data_status: DataStatus,
         data: &'a [u8],
     }
-
 
     /// LE Periodic Advertising Sync Lost event [📖](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host-controller-interface/host-controller-interface-functional-specification.html#UUID-a1a90403-d1b7-d117-0f30-620c8d3912ef)
     struct LePeriodicAdvertisingSyncLost(16) {
