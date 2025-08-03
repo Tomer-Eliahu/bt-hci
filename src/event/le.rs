@@ -205,6 +205,18 @@ le_events! {
         data: &'a [u8],
     }
 
+    /// LE Periodic Advertising Report V2 event [📖](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host-controller-interface/host-controller-interface-functional-specification.html#UUID-e216c26f-0383-c651-4b8d-1409b91c7e34)
+    struct LePeriodicAdvertisingReportV2<'a>(37) {
+        sync_handle: SyncHandle,
+        tx_power: i8,
+        rssi: i8,
+        cte_kind: CteKind,
+        periodic_event_counter: u16,
+        subevent: u8,
+        data_status: DataStatus,
+        data: &'a [u8],
+    }
+
     /// LE Periodic Advertising Sync Lost event [📖](https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host-controller-interface/host-controller-interface-functional-specification.html#UUID-a1a90403-d1b7-d117-0f30-620c8d3912ef)
     struct LePeriodicAdvertisingSyncLost(16) {
         sync_handle: SyncHandle,
